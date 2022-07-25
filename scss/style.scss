@@ -1,0 +1,1256 @@
+@font-face {
+    font-family: IRANSansXFaNum;
+    src: url("../font/IRANSansXFaNum-Regular.woff") format("woff");
+}
+@mixin matn-color-size-weight ($C,$FS,$FW) {
+    color: $C;
+    font-size: $FS;
+    font-weight: $FW;
+}
+@mixin bg-position-repeat-size ($position,$repeat,$size) {
+    background-position: $position;
+    background-repeat: $repeat;
+    background-size: $size;
+}
+@mixin flex-direction-justify-align  ($direction:row,$justify:center,$align:center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+*{
+    margin: 0;
+    font-family: IRANSansXFaNum;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+
+    background-color: #d9d9d9;
+}
+
+.nav-1{
+    @include flex-direction-justify-align(row,center,center);
+    width: 100%;
+    background-color: #0097a7;
+    @media (max-width:1120px) {
+        width: calc(1120px - 20px);
+        padding: 0 10px;
+    }
+    .header1{
+        @include flex-direction-justify-align(row,space-between,center);
+        width: 1120px;
+        height: 30px;
+        background-color: transparent;
+        color: #fff;
+        @media (max-width:1120px) {
+            width: 100%;
+        }
+        .ul-1-header{
+            @include flex-direction-justify-align();
+            a{
+                @include matn-color-size-weight(#fff,11px,500);
+                margin-left: 14px;
+            }
+        }
+    
+        .ul-2-header{
+            @include flex-direction-justify-align();
+            a,p{
+                @include matn-color-size-weight(#fff,12px,500);
+            }
+            i{
+                font-size: 17px;
+            }
+            li{
+                @include flex-direction-justify-align();
+                margin-right: 14px;
+            }
+            .jostojo-i-h{
+                cursor: pointer;
+                padding-right: 10px;
+                border-right:  1px solid hsla(0,0%,100%,.3);
+            }
+            .jostojo-h{
+                cursor: pointer;
+                padding-left: 10px;
+                border-left:  1px solid hsla(0,0%,100%,.3);
+            }
+        }
+    }
+}
+
+.nav-2{
+    @include flex-direction-justify-align();
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 1px 0.5px 10px 1px rgba(0, 0, 0, 0.4);
+    @media (max-width:1120px) {
+        width: 1120px;
+    }
+    .header2{
+        @include flex-direction-justify-align(row,space-between,center);
+        width: 1120px;
+        background-color: transparent;
+        @media (max-width:1120px) {
+            width: 100%;
+        }
+        ul{
+            @include flex-direction-justify-align();
+            img{
+                margin-left: 10px;
+                transform: translateY(4px);
+            }
+            a{
+                @include matn-color-size-weight(#212121, 14px,500 );
+                margin-left: 10px;
+                &:hover{
+                    color: #0097a7;
+                }
+            }
+            .li-chesmak-zan{
+                a{
+                    margin-left: 3px;
+                }
+                img{
+                    transform: translateY(3px);
+                }
+            }
+        }
+        .img-gif-tabligh-header{
+            cursor: pointer;
+            border-radius: 4px;
+            height: 55px;
+            margin: 3px 3px 3px 0;
+        }
+    }
+}
+
+main{
+    @include flex-direction-justify-align(row,center,flex-start);
+    width: 1120px;
+    padding-top: 15px;
+    margin: 0 auto;
+
+    .m-bottom{
+        margin-bottom: 15px;
+    }
+    .jadval-lig{
+        width: 100%;
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            caption{
+                width: 100%;
+                background-color: #4285f4;
+                text-align: center;
+                color: #fff;
+            }
+            thead{
+                width: 100%;
+                tr{
+                    background-color: #777;
+                    width: 100%;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 13px;
+                    th{
+                        @include matn-color-size-weight(#fff,13.5px ,500 );
+                        text-align: center;
+                        
+                    } 
+                }
+            }
+            tbody{
+                background-color: #fff;
+                tr{
+    
+                    td{
+                        text-align: center;
+                        font-size: 13px;
+                        padding: 4px 0;
+                        color: #212121;
+                    }
+    
+                }
+                tr:nth-child(odd){
+                    background-color: #f3f3f3;
+                }
+            }
+        }
+    }
+    .bakhsh-yek-roz{
+
+
+        .natije-bazi{
+            @include flex-direction-justify-align(row,space-between,center);
+            padding: 0 3px;
+            img{
+                width: 20px;
+                height: 20px;
+                transform: translateY(3px);
+            }
+            a{
+                @include matn-color-size-weight(#212121,12px ,500 );
+            }
+            &:nth-of-type(even){
+                background-color: #f3f3f3;
+            }
+        }
+
+        .tarikh-jadval{
+            background-color: #777;
+            padding: 0 3px;
+            p{
+                @include matn-color-size-weight(#fff,13.5px ,500 );
+                text-align: center;
+            }
+        }
+       
+    }
+    h3{
+        @include matn-color-size-weight(#0097a7, 18px,500 );
+        text-align: center;
+        padding: 10px 0 20px 0;
+    }
+    .moshahede-kamel-jadval{
+        background-color: #fafafa;
+        border-radius: 0 0 5px 5px;
+        padding: 7px 0;
+        a{
+            @include flex-direction-justify-align();
+            @include matn-color-size-weight(#000, 14px,500 );
+            padding: 3px 0;
+            p{
+                padding-left: 5px;
+            }
+            i{
+                font-size: 11px;
+            }
+        }
+    }
+    .tabligh-slider{
+        position: relative;
+        width: 300px;
+        border: 1px solid #cccccc;
+        .caption-tabligh-slider{
+            @include flex-direction-justify-align(row,space-between,center);
+            color: #777777;
+            padding: 4px 10px 4px 4px;
+            height: 100%;
+            background-color: #eeeeee;
+            border-bottom: 1px solid #dddddd;
+            a{
+                @include flex-direction-justify-align();
+            }
+        }
+
+        .body-tabligh-slider{
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            overflow-x: hidden;
+            div{
+                padding: 10px 5px;
+                a{
+                    @include matn-color-size-weight(#444444,15px ,600 );
+
+                }
+                img{
+                    width: 290px;
+                }
+            }
+            &:hover{
+                a{
+                    color: #dc3545;
+                }
+            }
+
+        }
+
+        .i-tabligh-slider{
+            background-color: rgba(0,0,0,0.27);
+            color: #fff;
+            transition: background-color 0.2s;
+            cursor: pointer;
+            padding: 8px 2px;
+            position: absolute;
+            top: 50%;
+            &:hover{
+                background-color: rgba(0,0,0,0.87);
+            }
+        }
+        .fa-chevron-left{
+            left: 0;
+        }
+        
+    }
+
+    .sec-3-main{
+        @include flex-direction-justify-align(column,center ,center );
+        margin: 0 15px;
+
+        .tabligh-top{
+            width: 300px;
+            border-radius: 4px;
+            margin-bottom: 7px;
+            cursor: pointer;
+        }
+
+        .bg-aqua{
+            background-color: #0097a7;
+            border-radius: 6px;
+            .akharin-akhbar-football{
+                width: 300px;
+                background-color: #fff;
+                margin-top: 3px;
+                border-radius: 4px 4px 5px 5px;
+
+                .select-part{
+                    @include flex-direction-justify-align(row,space-around,center);
+
+                    a{
+                        @include matn-color-size-weight(#212121, 13px,500 );
+                        padding: 10.7px;
+                    }
+                    .jadidtarin{
+                        border-bottom: 2px solid #0097a7;
+                    }
+                    .porbazdid{
+                        border-bottom: 2px solid #fff;
+                    }
+                    .porhashie{
+                        border-bottom: 2px solid #fff;
+                    }
+                }
+                .select-filter{
+                    @include flex-direction-justify-align(row,space-around,center);
+                    background-color: #f3f3f3;
+                    padding: 12px 0;
+                    div{
+                        @include flex-direction-justify-align();
+                        input{
+                            accent-color: #0097a7;
+                        }
+                        p{
+                            @include matn-color-size-weight(#212121,13px,500 );
+                            padding-right: 5px;
+                        }
+                    }
+                }
+
+                .akhbar-ha{
+                    height: 1500px;
+                    padding: 15px 5px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    overflow-y: scroll;
+                    &::-webkit-scrollbar{
+                        width: 5px;
+                    }
+                    &::-webkit-scrollbar-thumb{
+                        width: 3px;
+                        background-color: rgb(207, 207, 207);
+                        border-radius: 5px;
+                    }
+                    .akhbar{
+                        line-height: 30px;
+                        div{
+                            @include flex-direction-justify-align();
+                            p{
+                                @include matn-color-size-weight(#212121,12px ,500 );
+                            }
+                            i{
+                                color: #0097a7;
+                                padding-left: 3px;
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .bg-aqua{
+            
+            .lig-hay-khareji{
+                width: 300px;
+                background-color: #fff;
+                margin-top: 3px;
+                border-radius: 4px 4px 5px 5px;
+
+
+                .d-select{
+                    @include flex-direction-justify-align(row,space-between,center);
+                    padding: 0 5px;
+                    margin-bottom: 10px;
+                    .select{
+                        width: 145px;
+                        height: 35px;
+                        border-radius: 5px;
+                        border-color: #d9d9d9;
+                        option{
+                            &:hover{
+                                background: #0097a7;
+                            }
+                        }
+                    }
+                }
+
+                .jadval-natije-lig{
+
+                    .caption-lig{
+                        background-color: #4285f4;
+                        text-align: center;
+                        color: #fff;
+                    }
+
+
+                }
+
+
+            }
+        }
+
+        .bg-aqua{
+            .jadval-lig-hay-khareji{
+                width: 300px;
+                background-color: #fff;
+                margin-top: 3px;
+                border-radius: 4px 4px 5px 5px;
+                .caption-jadval-lig-hay-khareji{
+                    @include matn-color-size-weight(#0097a7, 16px,500 );
+                    text-align: center;
+                }
+
+                .select-jadval-lig-hay-khareji{
+                    @include flex-direction-justify-align(row,space-between,center);
+                    padding: 0 5px;
+                    margin-bottom: 10px;
+                    select{
+                        height: 35px;
+                        border-radius: 5px;
+                        border-color: #d9d9d9;
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+
+        .bg-aqua{
+            .moghadamati-jom-jahani-oropa{
+                width: 300px;
+                background-color: #fff;
+                margin-top: 3px;
+                border-radius: 4px 4px 5px 5px;
+
+                select{
+                    width: calc(100% - 10px);
+                    margin: 0 5px 10px 5px;
+                    height: 35px;
+                    border-radius: 5px;
+                    border-color: #d9d9d9;
+                }
+                .jadval-moghadamati-jom-jahani-oropa{
+                    .p-goroh{
+                        @include matn-color-size-weight(#fff,15px ,500 );
+                        background-color: #28a745;
+                        text-align: center;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .bg-aqua{
+            .ghahremani-zir-23sal-asia{
+                width: 300px;
+                background-color: #fff;
+                margin-top: 3px;
+                border-radius: 4px 4px 5px 5px;
+
+                select{
+                    width: calc(100% - 10px);
+                    margin: 0 5px 10px 5px;
+                    height: 35px;
+                    border-radius: 5px;
+                    border-color: #d9d9d9;
+                }
+                .jadval-lig{
+
+                    thead{
+                        tr{
+                            td{
+                                text-align: center;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .yellow{
+                    background-color: #ffc107;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #fff;
+                }
+
+            }
+        }
+
+    }
+
+    .sec-4-main{
+        @include flex-direction-justify-align(column,flex-start,center);
+        img{
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 7px;
+            @media (max-width:1120px) {
+                width: 100px;
+            }
+        }
+    }
+
+    .sec-1-2-slider-big-main{
+        .slider-big{
+            width: 620px;
+            height: 240px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            position: relative;
+            .fa-angle-right,.fa-angle-left{
+                z-index: 1000000;
+                position: absolute;
+                top: 110px;
+                color: #0097a7;
+                padding: 6px 11px;
+                background-color: #fff;
+                font-size: 17px; 
+                cursor: pointer;
+            }
+            .fa-angle-left{
+                border-radius: 0 3px 3px 0;
+                left: 310px;
+            }
+            .fa-angle-right{
+                border-radius: 3px 0 0 3px;
+                right: 0;
+            }
+            ul{
+                @include flex-direction-justify-align();
+                position: absolute;
+                bottom: 20px;
+                left: 100px;
+                z-index: 10000;
+                li{
+                    cursor: pointer;
+                    font-weight: 700;
+                    color: #fff;
+                    background-color: #d0d0d0;
+                    width: 17px;
+                    height: 18px;
+                    font-size: 14px;
+                    margin: 0 3px;
+                    border-radius: 3px;
+                    text-align: center;
+                    &:first-child{
+                        background-color: #0097a7;
+                    }
+                }
+            }
+            .body-slider-big{
+                display: flex;
+                flex-direction: row;
+                overflow:hidden;
+                width: 100%;
+                height: 100%;
+                .d-body-slider-big{
+                   display: flex;
+                   flex-direction: row;
+                   border-radius: 5px;
+                    width: 100%;
+                    background-color: #fff;
+                    img{
+                        width: 310px;
+                        border-radius: 0 5px 5px 0;
+                        animation: move 5s infinite;
+                        @keyframes move {
+                            from{
+                                transform: scale(1,1);
+                            }
+                            to{
+                                transform: scale(1.2,1.2);
+                            }
+                        } 
+                    }
+                    .matn-d-body-slider-big{
+                        width: 310px;
+                        position: relative;
+                        z-index: 500;
+                        background-color: #fff;
+                        padding:15px 10px;
+                        p:nth-child(1) {
+                            font-size: 12px;
+                            margin-bottom: 5px;
+                        }
+                        p:nth-child(3) {
+                            font-size: 13px;
+                        }
+                        h1{
+                            margin-bottom:15px;
+                        }
+                    }
+                }
+            }
+        }
+        .sec-1-2-main{
+            @include flex-direction-justify-align(row,center,flex-start);
+            .sec-1-main{
+                .tabligh{
+                    img{
+                        border-radius: 4px;
+                        width: 100%;
+                    }
+                    margin-bottom: 8px;
+                }
+
+                .bg-aqua{
+                    background-color: #0097a7;
+                    border-radius: 6px;
+                    height: 100%;
+                    width: 300px;
+                    padding-top: 3px;
+                    .lig-hay-irani{
+                        width: 100%;
+                        background-color: #fff;
+                        border-radius: 4px 4px 5px 5px;
+                        .jadval-natije-lig{
+                            .caption-lig{
+                                background-color: #ffc107;
+                                text-align: center;
+                                color: #fff;
+                            }
+                        }
+                        .laghv{
+                            color: #dc3545;
+                        }
+                        .d-select{
+                            @include flex-direction-justify-align(row,space-between,center);
+
+                            margin-bottom: 10px;
+                            .select{
+                                width: 145px;
+                                height: 35px;
+                                margin: 0 5px;
+                                border-radius: 5px;
+                                border-color: #d9d9d9;
+                                option{
+                                    &:hover{
+                                        background: #0097a7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .tabligh-slider{
+                    width: 300px;
+                    .body-tabligh-slider{
+                        div{
+                            img{
+                                width: 290px;
+                            }
+                        }
+                    }
+                }
+
+                .bg-aqua{
+                    .jadval-ligbartar-iran{
+                        width: 100%;
+                        background-color: #fff;
+                        border-radius: 4px 4px 5px 5px;
+                        .jadval-lig{
+                            caption{
+                                background-color: #ffc107;
+                            }
+                        }
+                    }
+                    .select-jadval-ligbartar-iran{
+                        
+                            @include flex-direction-justify-align(row,space-between,center);
+                            padding: 0 5px;
+                            margin-bottom: 10px;
+                            select{
+                                width: 100%;
+                                height: 35px;
+                                border-radius: 5px;
+                                border-color: #d9d9d9;
+                                option{
+                                    &:hover{
+                                        background: #0097a7;
+                                    }
+                                }
+                            }
+                
+                    }
+                }
+
+                .bg-aqua{
+                    .akharin-akhbar-sayer{
+                        width: 100%;
+                        background-color: #fff;
+                        border-radius: 4px 4px 5px 5px;
+                        
+                        .akhbar-ha{
+                            height: 900px;
+                            padding: 15px 5px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            overflow-y: scroll;
+                            &::-webkit-scrollbar{
+                                width: 5px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                width: 3px;
+                                background-color: rgb(207, 207, 207);
+                                border-radius: 5px;
+                            }
+                            .akhbar{
+                                line-height: 30px;
+                                div{
+                                    @include flex-direction-justify-align(row,center,flex-start);
+                                    p{
+                                        @include matn-color-size-weight(#212121,12px ,500 );
+                                    }
+                                    i{
+                                        color: #0097a7;
+                                        padding-left: 3px;
+                                        font-size: 11px;
+                                        margin-top: 9px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bg-aqua{
+                    .lig-melathay-valibal{
+                        width: 100%;
+                        background-color: #fff;
+                        border-radius: 4px 4px 5px 5px;
+                        .d-select{
+                            @include flex-direction-justify-align(row,space-between,center);
+
+                            margin-bottom: 10px;
+                            .select{
+                                width: 145px;
+                                height: 35px;
+                                margin: 0 5px;
+                                border-radius: 5px;
+                                border-color: #d9d9d9;
+                                option{
+                                    &:hover{
+                                        background: #0097a7;
+                                    }
+                                }
+                            }
+                        }
+
+                        .jadval-natije-lig{
+                            .bakhsh-yek-roz{
+                                .natije-bazi{
+                                    padding: 6px 2px;
+                                    .d-right-natije-bazi{
+                                        @include flex-direction-justify-align();
+                                        .tarafin-natije-bazi{
+                                            @include flex-direction-justify-align(column,center ,flex-start );
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .bakhsh-hay-yek-roz{
+                                height: 330px;
+                                overflow-y: scroll;
+                                &::-webkit-scrollbar{
+                                    width: 5px;
+                                    background-color: transparent;
+                                }
+                                &::-webkit-scrollbar-thumb{
+                                    width: 3px;
+                                    background-color: rgb(207, 207, 207);
+                                    border-radius: 5px;
+                                }
+                            }
+                            .caption-lig{
+                                background-color: #a57300;
+                                color: #fff;
+                                text-align: center;
+                            }
+                            .tarikh{
+                                text-align: center;
+                                padding: 5px 0;
+                                font-size: 13px;
+                            }
+                        }
+
+                        .jadval-lig{
+                            border-radius: 0 0 5px 5px;
+                            caption{
+                                background-color: #a57300;
+                            }
+                        }
+                    }
+                }
+
+                .bg-aqua{
+                    .pakhsh-zende{
+                        text-align: center;
+                        width: 100%;
+                        background-color: #fff;
+                        border-radius: 4px 4px 5px 5px;
+                        .jadval-natije-lig{
+                            .caption-lig{
+                                @include matn-color-size-weight(#0097a7, 16px,500 );
+                                text-align: center;
+                                padding: 10px 0 15px 0;
+                            }
+                            .bakhsh-yek-roz{
+                                .natije-bazi{
+                                    padding: 8px 5px;
+                                    font-size: 12px;
+                                    .p-natije-bazi{
+                                        @include flex-direction-justify-align(row,flex-start ,flex-start );
+                                        width: 50px;
+
+                                    }
+                                    .d-1-natije-bazi{
+                                        
+                                        p:nth-child(2){
+                                            color: #777;
+                                            font-size: 11px;
+                                        }
+                                    }
+                                    .d-2-natije-bazi{
+                                        font-size: 10px;
+                                        a{
+                                            font-size: 10px;
+                                            color: #dc3545;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .sec-2-main{
+                margin-right: 15px;
+                .tabligh{
+                    img{
+                        width: 100%;
+                        border-radius: 4px;
+                    }
+                }
+
+                .bg-aqua{
+                    background-color: #0097a7;
+                    border-radius: 6px;
+                    padding-top: 3px;
+                    height: 100%;
+                    .golzanan-bartar{
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+                        border-radius: 4px 4px 5px 5px;
+                        select{
+                            width: calc(100% - 10px);
+                            margin: 0 5px 10px 5px;
+                            height: 35px;
+                            border-radius: 5px;
+                            border-color: #d9d9d9;
+                        }
+                        ul{
+                            li{
+                                @include flex-direction-justify-align(row,space-between ,center );
+                                padding: 0px 15px;
+                                p,a{
+                                    @include matn-color-size-weight(#000,13px ,500 );
+                                }
+                                p{
+                                    font-size: 12px;
+                                    margin: 0 2px;
+                                }
+                                img{
+                                    border-radius: 50%;
+                                }
+                                .d-row{
+                                    @include flex-direction-justify-align(row,flex-start,center);
+                                    margin: 8px 0;
+                                }
+                                .d-1-li{
+                                 
+                                }
+                                .d-2-li{
+                                    p{
+                                        font-size: 15px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                            li:nth-child(odd){
+                                background-color: #f3f3f3;
+                            }
+                        }
+                    }
+                }
+
+                .bg-aqua{
+                    .lig-hay-khareji{
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+                        border-radius: 4px 4px 5px 5px;
+                        select{
+                            width: calc(100% - 10px);
+                            margin: 0 5px 10px 5px;
+                            height: 35px;
+                            border-radius: 5px;
+                            border-color: #d9d9d9;
+                        }
+                        .jadval-natije-lig{
+                            .caption-lig{
+                                background-color: #ea4336;
+                                text-align: center;
+                                color: #fff;
+                            }
+                        }
+                        .jadval-lig{
+                            caption{
+                                background-color: #ea4336;
+                            }
+                        }
+                    }
+                }
+
+                .bg-aqua{
+                    .lig-melat-hay-oropa{
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+                        border-radius: 4px 4px 5px 5px;
+                        select{
+                            width: calc(100% - 10px);
+                            margin: 0 5px 10px 5px;
+                            height: 35px;
+                            border-radius: 5px;
+                            border-color: #d9d9d9;
+                        }
+                       .jadval-lig-melat-hay-oropa{
+                           height: 300px;
+                           overflow-y: scroll;
+                            &::-webkit-scrollbar{
+                                width: 5px;
+                                background-color: transparent;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                width: 3px;
+                                background-color: rgb(207, 207, 207);
+                                border-radius: 5px;
+                            }
+                           .p-goroh{
+                               background-color: #47a0c2;
+                               text-align: center;
+                               color: #fff;
+                               font-size: 15px;
+                           }
+                       }
+                       .jadval-lig{
+                           caption{
+                            background-color: #47a0c2;
+                           }
+                       }
+
+                        
+                    }
+                }
+
+                .bg-green{
+                    background-color: #28a745;
+                }
+
+                .bg-aqua{
+                    
+                    .video-slider{
+                        position: relative;
+                        background-color: #fff;
+                        width: 302px;
+                        height: 100%;
+                        border-radius: 4px 4px 5px 5px;
+                        .bakhshbandi-video-slider{
+                            @include flex-direction-justify-align(row,space-around ,center);
+                            width: 100%;
+                            a{
+                                @include matn-color-size-weight(#000,15px ,500 );
+                                width: 100%;
+                                text-align: center;
+                                padding-bottom: 8px;
+                                &:nth-child(1){
+                                    border-bottom: 2px solid #0097a7;
+                                }
+                            }
+                        }
+                        .fa-angle-right,.fa-angle-left{
+                            z-index: 1000000;
+                            position: absolute;
+                            top: 170px;
+                            color: #0097a7;
+                            padding: 7px 10px;
+                            background-color: #fff;
+                            font-size: 17px; 
+                            cursor: pointer;
+                        }
+                        .fa-angle-left{
+                            border-radius: 0 3px 3px 0;
+                            left: 0;
+                        }
+                        .fa-angle-right{
+                            border-radius: 3px 0 0 3px;
+                            right: 0;
+                        }
+                        .body-video-slider{
+                            position: relative;
+                            background-color: #fff;
+                            display: flex;
+                            flex-direction: row;
+                            overflow:hidden;
+                            width: 100%;
+                            height: 200px;
+                            div{
+                                position: relative;
+                                width: 302px;
+                                height: 100%;
+                                img{
+                                    height: 100%;
+                                    width: 303px;
+                                }
+                                .fa-play{
+                                    position: absolute;
+                                    top: 75px;
+                                    right: 125px;
+                                    color: #fff;
+                                    font-size: 20px;
+                                    padding: 11px 15px;
+                                    border-radius: 50%;
+                                    background-color: rgba(0, 0, 0, 0.6);
+                                }
+                                p{
+                                    position: absolute;
+                                    width: 100%;
+                                    padding-left: 0 !important;
+                                    padding-right: 0 !important;
+                                    bottom: 0;
+                                    right: 0;
+                                    background: linear-gradient(0deg,#000,transparent 100%);
+                                    padding:5px 10px 5px 59px;
+                                    color: #fff;
+                                    font-size: 14px;
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                .bg-aqua{
+                    .gishe-slider{
+                        position: relative;
+                        background-color: #fff;
+                        width: 302px;
+                        height: 100%;
+                        border-radius: 4px 4px 5px 5px;
+                        .fa-angle-right,.fa-angle-left{
+                            z-index: 1000000;
+                            position: absolute;
+                            top: 150px;
+                            color: #0097a7;
+                            padding: 4px 12px;
+                            background-color: #fff;
+                            font-size: 17px; 
+                            cursor: pointer;
+                        }
+                        .fa-angle-left{
+                            border-radius: 0 3px 3px 0;
+                            left: 0;
+                        }
+                        .fa-angle-right{
+                            border-radius: 3px 0 0 3px;
+                            right: 0;
+                        }
+                        .body-gishe-slider{
+                            position: relative;
+                            background-color: #fff;
+                            display: flex;
+                            flex-direction: row;
+                            overflow:hidden;
+                            width: 100%;
+                            height: 240px;
+                            div{
+                                position: relative;
+                                width: 302px;
+                                height: 100%;
+                                img{
+                                    height: 200px;
+                                    width: 303px;
+                                }
+                                p{
+                                    color: #212121;
+                                    font-size: 14px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+footer{
+    @include flex-direction-justify-align();
+    width: 100%;
+    height: 100%;
+    background-color: #131a2b;
+    @media (max-width:1120px) {
+        width: 1120px;
+    }
+    .footer{
+        width: 1250px;
+        .sec-1-footer{
+            @include flex-direction-justify-align(row,center,flex-start);
+            padding: 40px 0 30px 0;
+            .d-sec-footer{
+                width: 100%;
+                .caption-footer{
+                    @include flex-direction-justify-align(row,flex-start,center);
+                    @include matn-color-size-weight(#fff,12.5px ,600 );
+                    img{
+                        margin-left: 10px;
+                    }
+                }
+                .d-matn-sec-1-footer{
+                    @include flex-direction-justify-align(column,center ,flex-start);
+                    line-height: 27px;
+                    a{
+                        @include matn-color-size-weight(#999,13px ,500 );
+                    }
+                }
+            }
+        }
+        .sec-2-footer{
+            @include flex-direction-justify-align(row,space-between,center );
+            border-top: 1px solid hsla(0,0%,100%,.2);
+            padding: 15px 0 25px 0;
+            div{
+                @include flex-direction-justify-align();
+                .cap-var3-footer{
+                    @include matn-color-size-weight(#fff,12.5px ,500 );
+                    transform: translateY(-3px);
+                    margin: 0 5px 0 15px;
+                }
+                p{
+                    @include matn-color-size-weight(#999,12px ,500 );
+                }
+            }
+            uL{
+                @include flex-direction-justify-align();
+                li{
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.d-search{
+    @include flex-direction-justify-align();
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 95px;
+    z-index: 12000000;
+    background-color: #fff;
+    display: none;
+    form{
+        width: 75vw;
+        input{
+            width: 100%;
+            height: 45px;
+            border-radius: 4px;
+            border:1px solid #0097a7;
+            &:focus{
+                outline: none;
+            }
+            &::placeholder{
+                padding: 7px 40px 7px 0;
+            }
+        }
+    }
+    i{
+        cursor: pointer;
+        color: #777;
+        margin-right: 40px;
+    }
+}
+
+.bg-dark{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000000;
+    background-color: rgba(0,0,0,.8);
+    display: none;
+}
+
+.return-to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    i{
+        background-color: #0097a7;
+        padding: 10px;
+        border-radius: 50%;
+        color: #fff;
+        transition: 0.3s;
+        &:hover{
+            background-color: #212121;
+        }
+    }
+}
